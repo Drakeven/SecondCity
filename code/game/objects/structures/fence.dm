@@ -111,6 +111,12 @@
 	icon_state = "door_closed"
 	cuttable = FALSE
 
+/obj/structure/fence/door/vamp
+	name = "fence door"
+	desc = "Not very useful without a real lock."
+	icon_state = "door_closed_vamp"
+	cuttable = FALSE
+
 /obj/structure/fence/door/Initialize(mapload)
 	. = ..()
 
@@ -118,6 +124,10 @@
 
 /obj/structure/fence/door/opened
 	icon_state = "door_opened"
+	density = FALSE
+
+/obj/structure/fence/door/vamp/opened
+	icon_state = "door_opened_vamp"
 	density = FALSE
 
 /obj/structure/fence/door/attack_hand(mob/user, list/modifiers)
